@@ -16,12 +16,12 @@ module PlayAuth
     			# @!endgroup
 
     			attr_accessible	:name,
-         							:email,
-										:password,
-										:password_confirmation,
-										:remember_me
+         						:email,
+								:password,
+								:password_confirmation,
+								:remember_me
 
-				has_many :authorizations, :dependent => :destroy
+				has_many :authorizations, :dependent => :destroy, :class_name => 'PlayAuth::Authorization'
 				#belongs_to :role
 
     end

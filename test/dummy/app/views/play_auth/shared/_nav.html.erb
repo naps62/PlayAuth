@@ -3,18 +3,18 @@
     <li><%= link_to(t('navigation.links.profile'), profile_path) %></li>
     <li><%= link_to(t('navigation.links.edit'), edit_user_registration_path) %></li>
 
-    <li><%= link_to 'asd', destroy_user_session_path, :method => :delete %></li>
+    <li><%= link_to t('nav.links.sign_out'), destroy_user_session_path, :method => :delete %></li>
   <% else %>
-    <li><%#= link_to(t('nav.links.log_in'), new_user_session_path) %></li>
+    <li><%= link_to(t('nav.links.log_in'), new_user_session_path) %></li>
 
-    <li><%#= link_to(t('navigation.links.sign_up'), new_user_registration_path) %></li>
+    <li><%= link_to(t('navigation.links.sign_up'), new_user_registration_path) %></li>
 
-    <li><%#= link_to t('navigation.links.forgot'), new_password_path(resource_name) %></li>
+    <li><%= link_to t('navigation.links.forgot'), new_password_path(:user) %></li>
 
     <li><%#= link_to t('navigation.links.confirmation'), new_confirmation_path(resource_name) %></li>
 
     <% PlayAuth::User.omniauth_providers.each do |provider| %>
-      <li><%#= link_to t('navigation.links.omniauth', provider: provider.to_s.titleize), omniauth_authorize_path(PlayAuth::User.new, provider), :id => "#{provider.to_s}" %></li>
+      <li><%= link_to provider.to_s.titleize, omniauth_authorize_path(PlayAuth::User.new, provider), :id => "#{provider.to_s}" %></li>
     <% end -%>
   <% end %>
 </ul>
