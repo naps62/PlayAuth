@@ -61,6 +61,7 @@ GEM
     erubis (2.7.0)
     faraday (0.8.1)
       multipart-post (~> 1.1)
+    haml (3.1.6)
     hashie (1.2.0)
     hike (1.2.1)
     httpauth (0.1)
@@ -148,6 +149,7 @@ PLATFORMS
 
 DEPENDENCIES
   devise
+  haml
   jquery-rails
   play_auth!
   sqlite3
