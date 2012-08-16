@@ -206,8 +206,8 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', :scope => 'user,public_repo'
   unless Rails.env.test?
-    config.omniauth :facebook, "387891007905465", "0cb143f301a74968289daf606b29dbec",
-      { :scope => 'email, offline_access' }
+    config.omniauth :facebook, "331812513561655", "37f920bb0e998f8eebc124c97ee901da",
+      {:scope => 'email, offline_access', :client_options => {:ssl => {:ca_file => '/usr/lib/ssl/certs/ca-certificates.crt'}}} 
       
     require 'openid/store/filesystem'
     config.omniauth :open_id, 

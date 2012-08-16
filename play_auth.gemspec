@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Miguel Palhas"]
   s.email       = ["mpalhas@gmail.com"]
   s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of PlayAuth."
-  s.description = "TODO: Description of PlayAuth."
+  s.summary     = "Handling of user management and user authentication for the UPlay system"
+  s.description = "UPlay user management engine"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
