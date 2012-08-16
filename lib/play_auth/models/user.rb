@@ -24,6 +24,7 @@ module PlayAuth
 
 				has_many :authorizations, :dependent => :destroy
 				#belongs_to :role
+
 			end
 		end
 	end
