@@ -12,8 +12,12 @@ gem 'devise'#, :git => "git://github.com/plataformatec/devise.git"
 
 gem 'haml'
 
+group :development do
+	gem 'awesome_print', :require => 'ap'
+end
+
 group :test do
-	gem 'cucumber-rails', :require => false
+	gem 'cucumber-rails'#, :require => false
 	gem 'database_cleaner'
 end
 

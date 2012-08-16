@@ -1,4 +1,4 @@
-@authentication @wip
+@playauth
 Feature: Edit user profile
 
 	In order to change my personal data

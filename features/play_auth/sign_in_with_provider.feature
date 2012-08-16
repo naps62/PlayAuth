@@ -1,5 +1,5 @@
-@authentication @wip
-Feature: Sign In with provider
+@playauth @wip
+Feature: Sign In from provider
 
 	In order to login easily
 	As a user of other websites
@@ -21,7 +21,7 @@ Feature: Sign In with provider
 			| provider  |
 			| Facebook  |
 			| Twitter   |
-			| Open ID	|
+			| Google    |
 
 
 	# TODO é preciso pensar melhor este
@@ -39,4 +39,4 @@ Feature: Sign In with provider
 			| provider  |
 			| Facebook  |
 			| Twitter   |
-			| Open ID	|
+			| Open ID	  |
