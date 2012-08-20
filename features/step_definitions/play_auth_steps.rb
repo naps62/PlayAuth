@@ -1,4 +1,4 @@
-Given /^I amsigned out$/ do
+Given /^I am signed out$/ do
 	if !@user.nil?
 		click_link 'Sign Out'
 	true

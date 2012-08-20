@@ -8,7 +8,6 @@ require 'omniauth'
 require 'omniauth-facebook'
 require 'omniauth-openid'
 require 'uuidtools'
-require 'will_paginate'
 require 'cancan'
 
 module PlayAuth
