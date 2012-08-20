@@ -25,10 +25,15 @@ class PlayAuth::Users::OmniauthCallbacksController < Devise::OmniauthCallbacksCo
 		session["devise.#{kind.downcase}_data"] = request.env['omniauth.auth']
 
 		if @user.persisted?	
-			sign_in_and_redirect @user, :event => :auth
+			#sign_in_and_redirect @user, :event => :auth
+			sign_in @user, :event => :auth
 		else
-			sign_in_and_redirect @user, :event => :first_auth
+			#sign_in_and_redirect @user, :event => :first_auth
+			sign_in @user, :event => :first_auth
 		end
+
+		# TODO this should be updated to a smarter redirect
+		redirect_to main_app.root_path
 
 	end
 

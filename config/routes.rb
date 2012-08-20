@@ -6,9 +6,6 @@ PlayAuth::Engine.routes.draw do
 					}, 
 					:class_name => "PlayAuth::User",
 					:module => :devise
-
-	match "/user/profile" => "users#show",
-			:as => "profile"
   
 	match	'/confirm/:confirmation_token',
 			:to => "devise/confirmations#show",

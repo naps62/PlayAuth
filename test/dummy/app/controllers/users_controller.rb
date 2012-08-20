@@ -6,5 +6,6 @@ class UsersController < ApplicationController
 
 	def show
 		@user = PlayAuth::User.find_by_id(params[:id])
+		logger.debug @user.inspect
 	end
 end
