@@ -1,0 +1,23 @@
+<% content_for :head do %>
+	<%= stylesheet_link_tag 'application' %>
+	<%= javascript_include_tag 'application' %>
+<% end %>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<%= yield :head %>
+	</head>
+
+	<body>
+		<% flash.each do |name, msg| %>
+			<%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+		<% end %>
+	</body>
+
+	<table>
+		<tr>
+			<td class='nav'><%= render 'layouts/nav' %></td>
+			<td class='content'><%= yield %>
+		</tr>
+	</table>

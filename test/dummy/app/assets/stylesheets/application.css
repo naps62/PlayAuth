@@ -22,13 +22,13 @@ table td {
 }
 
 .nav {
-	padding: 0 0 20px 30px;
+	padding: 10px 0 20px 30px;
 	width: 20%;
 	background-color: #EEE;
 }
 
 .content {
-	padding: 0 0 20px 30px;
+	padding: 10px 0 20px 30px;
 	background-color: #DDD;
 }
 

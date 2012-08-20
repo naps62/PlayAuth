@@ -1,0 +1,12 @@
+<b>ID:</b>
+<%= @user.id %>
+
+<b>Name</b>
+<%= @user.name %>
+
+<b>Accoumnts</b>
+<ul>
+<% @user.authorizations.each do |auth| %>
+	<li><%= "#{auth.provider.titleize} [#{auth.email}, #{auth.uid}]" %></li>
+<% end %>
+</ul>
