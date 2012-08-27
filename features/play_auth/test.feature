@@ -1,4 +1,4 @@
-@test @wip
+@playauth @test @wip
 Feature: Dummy feature
 
 	This is a useless feature

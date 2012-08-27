@@ -1,4 +1,4 @@
-@authentication @wip
+@playauth @authentication @wip
 Feature: Sign In
 
 	In order to have access to protected sections of the platform

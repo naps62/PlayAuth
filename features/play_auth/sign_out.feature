@@ -1,4 +1,4 @@
-@authentication @wip
+@playauth @wip
 Feature: Sign Out
 
 	In order to protect my account from unauthorized access

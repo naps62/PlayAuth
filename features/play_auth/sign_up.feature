@@ -1,4 +1,4 @@
-@authentication @wip
+@playauth @wip
 Feature: Sign Up
 
 	In order to have access to protected sections of the platform

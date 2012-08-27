@@ -22,6 +22,8 @@ class PlayAuth::Users::OmniauthCallbacksController < Devise::OmniauthCallbacksCo
 		@user = find_for_oauth(kind, request.env['omniauth.auth'], current_user)
 
 		flash[:notice] = I18n.t 'devise.omniauth_callbacks.success', :kind => kind
+
+		# TODO this is probably not necessary. only uid/email should be necessary to identify user. All the rest is already on DB
 		session["devise.#{kind.downcase}_data"] = request.env['omniauth.auth']
 
 		if @user.persisted?	

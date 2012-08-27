@@ -6,6 +6,6 @@ User List:
 
 <ul>
 	<% @users.each do |user| %>
-		<li><%= link_to user.email, user %></li>
+		<li><%= link_to user.email, play_auth.admin_user_path(user) %></li>
 	<% end %>
 </ul>

@@ -14,6 +14,11 @@ gem 'haml'
 
 group :development do
 	gem 'awesome_print', :require => 'ap'
+
+	# To use debugger
+	gem 'execjs'
+	gem 'therubyracer'
+	gem 'debugger'
 end
 
 group :test do
@@ -26,5 +31,3 @@ end
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use debugger
-# gem 'debugger'

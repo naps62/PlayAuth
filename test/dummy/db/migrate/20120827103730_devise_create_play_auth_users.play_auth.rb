@@ -1,3 +1,4 @@
+# This migration comes from play_auth (originally 20120808035140)
 class DeviseCreatePlayAuthUsers < ActiveRecord::Migration
   def up
     create_table :play_auth_users do |t|

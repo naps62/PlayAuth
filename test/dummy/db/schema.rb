@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120816155709) do
+ActiveRecord::Schema.define(:version => 20120827103733) do
 
   create_table "play_auth_authorizations", :force => true do |t|
     t.string   "provider",   :null => false
@@ -27,9 +27,15 @@ ActiveRecord::Schema.define(:version => 20120816155709) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "play_auth_roles", :force => true do |t|
+    t.string   "name",       :null => false
+    t.string   "desc"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "play_auth_users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
-    t.string   "name",                   :default => "", :null => false
     t.string   "encrypted_password",     :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
@@ -42,6 +48,9 @@ ActiveRecord::Schema.define(:version => 20120816155709) do
     t.string   "password_salt"
     t.datetime "created_at",                             :null => false
     t.datetime "updated_at",                             :null => false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.integer  "role_id"
   end
 
   add_index "play_auth_users", ["email"], :name => "index_play_auth_users_on_email", :unique => true
