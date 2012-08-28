@@ -15,7 +15,7 @@ module PlayAuth
       end
 
       def inject_seeds
-        append_file "db/seeds.rb", "PlayAuth::Engine.load_seed"
+        append_file "db/seeds.rb", "PlayAuth::Engine.load_seed\n"
       end
 
       def inject_routes
