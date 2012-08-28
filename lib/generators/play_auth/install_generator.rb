@@ -14,6 +14,10 @@ module PlayAuth
         template 'initializer.rb', 'config/initializers/play_auth.rb'
       end
 
+      def inject_seeds
+        append_file "db/seeds.rb", "PlayAuth::Engine.load_seed"
+      end
+
       def inject_routes
         inject_into_file  'config/routes.rb',
                     "\n\tmount PlayAuth::Engine => '/'",

@@ -21,6 +21,7 @@ module PlayAuth
 
     config.i18n.load_path += Dir[PlayAuth::Engine.root.join('config', 'locales', '**', '*.{rb,yml}')]
 
+
     def self.app_path
       File.expand_path '../../app', called_from
     end
