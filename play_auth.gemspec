@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = PlayAuth::VERSION
   s.authors     = ["Miguel Palhas"]
   s.email       = ["mpalhas@gmail.com"]
-  s.homepage    = "TODO"
+  #s.homepage    = "TODO"
   s.summary     = "Handling of user management and user authentication for the UPlay system"
   s.description = "UPlay user management engine"
 
