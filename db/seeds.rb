@@ -1,22 +1,27 @@
-puts 'Creating default Roles'
 
-['Admin', 'User'].each do |role|
-  PlayAuth::Role.find_or_create_by_name(role)
-end
+module PlayAuth
+  puts 'Creating default Roles'
 
-puts 'Creating initial admin user. Change password ASAP'
+  ['Admin', 'User'].each do |role|
+    Role.find_or_create_by_name(role)
+  end
 
-PlayAuth::User.create :first_name => 'Miguel',
+  puts 'Creating initial admin user. Change password ASAP'
+
+  user = User.create  :email      => 'mpalhas@gmail.com',
+                      :first_name => 'Miguel',
                       :last_name  => 'Palhas',
-                      :email      => 'mpalhas@gmail.com',
-                      :password   => 'mpalhas',
-                      :role       => PlayAuth::Role.find_by_name('Admin')
+                      :password   => 'mpalhas'
+
+  #user.roles << Role.find_by_name('Admin')
 
 
-puts 'Creating regular user'
+  puts 'Creating regular user'
 
-PlayAuth::User.create :first_name => 'Dummy62',
-                      :last_name  => 'Dummy62',
-                      :email      => 'dummy62@mail.com',
-                      :password   => 'dummy62',
-                      :role       => PlayAuth::Role.find_by_name('User')
+  user = User.create :email      => 'dummy62@mail.com',
+                     :first_name => 'Dummy62',
+                     :last_name  => 'Dummy62',
+                     :password   => 'dummy62'
+
+  #user.roles << Role.find_by_name('User')
+end

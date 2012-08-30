@@ -2,6 +2,8 @@
 module PlayAuth
   class User < ActiveRecord::Base
 
+    #### Devise ####
+
     #include PlayAuth::Models::UserConcern
     devise  :database_authenticatable,
             :registerable,
@@ -14,16 +16,21 @@ module PlayAuth
 
     devise  :encryptor => :sha1
 
+    #### Associations ####
+    has_many :authorizations, :dependent => :destroy
+
+    # user N to N roles
+    has_many :role_users
+    has_many :roles, :through => :role_users
+
     attr_accessible :first_name,
                     :last_name,
                     :email,
                     :password,
                     :password_confirmation,
                     :remember_me,
-                    :role
+                    :roles
 
-    has_many :authorizations, :dependent => :destroy
-    belongs_to :role
 
     def display_name
       full_name = "#{first_name} #{last_name}".strip
