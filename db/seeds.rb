@@ -13,7 +13,7 @@ module PlayAuth
                       :last_name  => 'Palhas',
                       :password   => 'mpalhas'
 
-  #user.roles << Role.find_by_name('Admin')
+  user.roles << Role.find_by_name('Admin')
 
 
   puts 'Creating regular user'
@@ -23,5 +23,5 @@ module PlayAuth
                      :last_name  => 'Dummy62',
                      :password   => 'dummy62'
 
-  #user.roles << Role.find_by_name('User')
+  user.roles << Role.find_by_name('User')
 end

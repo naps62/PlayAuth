@@ -32,7 +32,7 @@ module PlayAuth
                     :roles
 
 
-    def display_name
+    def name
       full_name = "#{first_name} #{last_name}".strip
       if full_name.size > 0
         full_name
@@ -42,8 +42,12 @@ module PlayAuth
     end
 
     def admin?
-      self.role.name == 'Admin'
+      self.role?('Admin')
     end
 
+    def role?(role)
+      self.roles.where(:name => role).any?
+    end
+    
   end
 end

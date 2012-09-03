@@ -4,11 +4,17 @@ module PlayAuth
 
     def initialize(user)
       
+      user.roles.each { |role| send role.name.downcase }
       if user.admin?
         can :manage, :all
       else
         can :read, :all
       end
+    end
+
+    def admin
+      can :manage, :all
+    end
 
     # Define abilities for the passed in user here. For example:
     #
@@ -32,7 +38,6 @@ module PlayAuth
     #   can :update, Article, :published => true
     #
     # See the wiki for details: https://github.com/ryanb/cancan/wiki/Defining-Abilities
-    end
 
   end
 end

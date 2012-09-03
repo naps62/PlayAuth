@@ -5,7 +5,10 @@ class PlayAuth::Admin::UsersController < PlayAuth::Admin::ApplicationController
   end
 
   def show
-    @users = PlayAuth::User.all
+    @user = PlayAuth::User.find params[:id]
+    @providers = @user.authorizations.map(&:provider)
+
+    render 'play_auth/users/show'
   end
 
   def edit

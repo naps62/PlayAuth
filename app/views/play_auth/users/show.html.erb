@@ -1,9 +1,1 @@
-<%= current_user.display_name %>
-
-<div class="user-providers">
-  <% @providers.each do |provider| %>
-    <div class="<%= provider %>">
-      <%= link_to "#{provider.to_s.capitalize}", play_auth.user_omniauth_authorize_path(provider.downcase, {:user => current_user}) %>
-    </div>
-  <% end %>
-</div>
+<%= render :partial => 'play_auth/users/user' %>
