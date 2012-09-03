@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 	
-	root :to => "users#index"
+	root :to => "play_auth/users#index"
 
 	mount PlayAuth::Engine => "/"
 end

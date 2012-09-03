@@ -7,7 +7,7 @@ PlayAuth::Engine.routes.draw do
           :class_name => 'PlayAuth::User',
           :module => :devise
 
-  match '/user/profile/:id' => 'users#show', :as => 'profile'
+  match '/profile' => 'users#profile', :as => 'profile'
 
   match '/admin' => 'admin/admin#index', :as => 'admin'
   
