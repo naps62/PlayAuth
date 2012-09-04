@@ -12,7 +12,8 @@ module PlayAuth
             :rememberable,
             :trackable,
             :validatable,
-            :omniauthable
+            :omniauthable,
+            :confirmable
 
     devise  :encryptor => :sha1
 
@@ -29,7 +30,8 @@ module PlayAuth
                     :password,
                     :password_confirmation,
                     :remember_me,
-                    :roles
+                    :roles,
+                    :confirmed_at
 
 
     def name
