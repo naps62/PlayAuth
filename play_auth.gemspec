@@ -26,6 +26,8 @@ Gem::Specification.new do |s|
   s.add_dependency "omniauth-openid",    "~> 1.0.1"
   s.add_dependency "uuidtools",          ">= 2.1.2"
   s.add_dependency "cancan",             ">= 1.6.8"
+  s.add_dependency 'factory_girl_rails', '~> 4.0'
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'rspec-rails'
 end

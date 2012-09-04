@@ -8,20 +8,22 @@ module PlayAuth
 
   puts 'Creating initial admin user. Change password ASAP'
 
-  user = User.create  :email      => 'mpalhas@gmail.com',
-                      :first_name => 'Miguel',
-                      :last_name  => 'Palhas',
-                      :password   => 'mpalhas'
+  user = User.create  :email        => 'mpalhas@gmail.com',
+                      :first_name   => 'Miguel',
+                      :last_name    => 'Palhas',
+                      :password     => 'mpalhas',
+                      :confirmed_at => Time.now
 
   user.roles << Role.find_by_name('Admin')
 
 
   puts 'Creating regular user'
 
-  user = User.create :email      => 'dummy62@mail.com',
-                     :first_name => 'Dummy62',
-                     :last_name  => 'Dummy62',
-                     :password   => 'dummy62'
+  user = User.create :email        => 'dummy62@mail.com',
+                     :first_name   => 'Dummy62',
+                     :last_name    => 'Dummy62',
+                     :password     => 'dummy62',
+                     :confirmed_at => Time.now
 
   user.roles << Role.find_by_name('User')
 end

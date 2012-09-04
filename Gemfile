@@ -7,8 +7,6 @@ gemspec
 
 # jquery-rails is used by the dummy application
 gem 'jquery-rails'
-gem 'devise'#, :git => "git://github.com/plataformatec/devise.git"
-gem 'haml'
 gem 'factory_girl'
 
 group :development do
