@@ -7,7 +7,6 @@ gemspec
 
 # jquery-rails is used by the dummy application
 gem 'jquery-rails'
-gem 'factory_girl'
 
 group :development do
 	gem 'awesome_print', :require => 'ap'
@@ -25,6 +24,7 @@ end
 
 group :test, :development do
   gem 'factory_girl_rails'
+  gem 'factory_girl'
 end
 
 # Declare any dependencies that are still in development here instead of in
