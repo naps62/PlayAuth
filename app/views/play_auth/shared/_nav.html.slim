@@ -1,0 +1,16 @@
+header
+  h1 NAV
+
+ul#play-auth-nav
+  - if user_signed_in?
+    li= link_to t('play_auth.links.profile'),  play_auth.profile_path(current_user)
+    li= link_to t('play_auth.links.edit'),     play_auth.edit_user_registration_path
+    li= link_to t('play_auth.links.sign_out'), play_auth.destroy_user_session_path, :method => :delete
+
+    - if current_user.admin?
+      li= link_to 'Admin', play_auth.admin_path
+
+  - else
+    li= link_to t('play_auth.links.log_in'),  play_auth.new_user_session_path
+    li= link_to t('play_auth.links.sign_up'), play_auth.new_user_registration_path
+    li= link_to t('play_auth.links.forgot'),  new_password_path(:user)

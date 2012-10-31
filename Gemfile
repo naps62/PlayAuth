@@ -7,6 +7,7 @@ gemspec
 
 # jquery-rails is used by the dummy application
 gem 'jquery-rails'
+gem 'slim-rails'
 
 group :development do
 	gem 'awesome_print', :require => 'ap'
