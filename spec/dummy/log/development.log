@@ -57881,3 +57881,288 @@ Served asset /jquery_ujs.js - 304 Not Modified (1ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 16:48:49 +0000
 Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-10-31 17:18:45 +0000
+Processing by Devise::SessionsController#destroy as HTML
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPlayAuth::User Load (0.2ms)[0m  SELECT "play_auth_users".* FROM "play_auth_users" WHERE "play_auth_users"."id" = 1 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 26.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 17:18:45 +0000
+Processing by PlayAuth::UsersController#index as HTML
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/users/index.html.slim within layouts/application (0.0ms)
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/shared/_nav.html.slim (1.4ms)
+Completed 200 OK in 52ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 17:18:45 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 17:18:45 +0000
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 17:18:45 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 17:18:45 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-31 17:18:46 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/naps62/projects/PlayAuth/app/views/devise/shared/_links.slim (1.8ms)
+  Rendered /home/naps62/projects/PlayAuth/app/views/devise/sessions/new.html.slim within layouts/application (5.1ms)
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/shared/_nav.html.slim (1.3ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 17:18:46 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 17:18:46 +0000
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 17:18:46 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 17:18:46 +0000
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/users/auth/facebook" for 127.0.0.1 at 2012-10-31 17:19:13 +0000
+
+
+Started GET "/users/auth/facebook/callback?code=AQAh9Xksqix7d-apVG2bRpEvuV5VtLui-BW92NkPKnmaTjzSa99Ggd5YxnJNBbfR-566TO-37LMcmOo5rTtBpYv4rql9HuYhJAkUh-9R7aFV6X_36R-443TbTeCKwzewExcpTJ006UL2c9Xm8ZT1-2bp15P_bm-OmjRwpPwE15hc9Nl1g5Fqub-BSnucT7TQLVoVzCSDpmwMyzseoj5jP51j" for 127.0.0.1 at 2012-10-31 17:19:13 +0000
+Processing by PlayAuth::Users::OmniauthCallbacksController#facebook as HTML
+  Parameters: {"code"=>"AQAh9Xksqix7d-apVG2bRpEvuV5VtLui-BW92NkPKnmaTjzSa99Ggd5YxnJNBbfR-566TO-37LMcmOo5rTtBpYv4rql9HuYhJAkUh-9R7aFV6X_36R-443TbTeCKwzewExcpTJ006UL2c9Xm8ZT1-2bp15P_bm-OmjRwpPwE15hc9Nl1g5Fqub-BSnucT7TQLVoVzCSDpmwMyzseoj5jP51j"}
+  [1m[36mPlayAuth::User Load (0.2ms)[0m  [1mSELECT "play_auth_users".* FROM "play_auth_users" WHERE "play_auth_users"."email" = 'mpalhas@gmail.com' LIMIT 1[0m
+  [1m[35mPlayAuth::Authorization Load (0.1ms)[0m  SELECT "play_auth_authorizations".* FROM "play_auth_authorizations" WHERE "play_auth_authorizations"."user_id" = 1 AND "play_auth_authorizations"."provider" = 'Facebook' AND "play_auth_authorizations"."uid" = '100000633932565' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "play_auth_authorizations" ("created_at", "email", "image_url", "link", "name", "provider", "secret", "token", "uid", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 31 Oct 2012 17:19:18 UTC +00:00], ["email", "mpalhas@gmail.com"], ["image_url", nil], ["link", "http://www.facebook.com/mpalhas"], ["name", "Miguel Palhas"], ["provider", "Facebook"], ["secret", nil], ["token", nil], ["uid", "100000633932565"], ["updated_at", Wed, 31 Oct 2012 17:19:18 UTC +00:00], ["user_id", 1]]
+  [1m[36m (19.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 50ms (ActiveRecord: 20.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 17:19:18 +0000
+Processing by PlayAuth::UsersController#index as HTML
+  [1m[35mPlayAuth::User Load (0.2ms)[0m  SELECT "play_auth_users".* FROM "play_auth_users" WHERE "play_auth_users"."id" = 1 LIMIT 1
+  [1m[36mPlayAuth::Role Load (0.1ms)[0m  [1mSELECT "play_auth_roles".* FROM "play_auth_roles" INNER JOIN "play_auth_role_users" ON "play_auth_roles"."id" = "play_auth_role_users"."role_id" WHERE "play_auth_role_users"."user_id" = 1[0m
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/users/index.html.slim within layouts/application (0.0ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "play_auth_roles" INNER JOIN "play_auth_role_users" ON "play_auth_roles"."id" = "play_auth_role_users"."role_id" WHERE "play_auth_role_users"."user_id" = 1 AND "play_auth_roles"."name" = 'Admin'
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/shared/_nav.html.slim (3.2ms)
+Completed 200 OK in 21ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 17:19:19 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:19 +0000
+Served asset /jquery.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:19 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:19 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/profile.1" for 127.0.0.1 at 2012-10-31 17:19:24 +0000
+Processing by PlayAuth::UsersController#profile as 
+  [1m[36mPlayAuth::User Load (0.2ms)[0m  [1mSELECT "play_auth_users".* FROM "play_auth_users" WHERE "play_auth_users"."id" = 1 LIMIT 1[0m
+  [1m[35mPlayAuth::Role Load (0.1ms)[0m  SELECT "play_auth_roles".* FROM "play_auth_roles" INNER JOIN "play_auth_role_users" ON "play_auth_roles"."id" = "play_auth_role_users"."role_id" WHERE "play_auth_role_users"."user_id" = 1
+  [1m[36mPlayAuth::Authorization Load (0.1ms)[0m  [1mSELECT "play_auth_authorizations".* FROM "play_auth_authorizations" WHERE "play_auth_authorizations"."user_id" = 1[0m
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/users/_user.html.slim (5.1ms)
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/users/show.html.slim within layouts/application (8.5ms)
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "play_auth_roles" INNER JOIN "play_auth_role_users" ON "play_auth_roles"."id" = "play_auth_role_users"."role_id" WHERE "play_auth_role_users"."user_id" = 1 AND "play_auth_roles"."name" = 'Admin'
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/shared/_nav.html.slim (3.3ms)
+Completed 200 OK in 33ms (Views: 22.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 17:19:24 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:24 +0000
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:24 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:24 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-10-31 17:19:32 +0000
+Processing by Devise::SessionsController#destroy as HTML
+WARNING: Can't verify CSRF token authenticity
+  [1m[36mPlayAuth::User Load (0.2ms)[0m  [1mSELECT "play_auth_users".* FROM "play_auth_users" WHERE "play_auth_users"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 31.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 17:19:33 +0000
+Processing by PlayAuth::UsersController#index as HTML
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/users/index.html.slim within layouts/application (0.0ms)
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/shared/_nav.html.slim (1.4ms)
+Completed 200 OK in 67ms (Views: 58.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 17:19:33 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:33 +0000
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:33 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:33 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2012-10-31 17:19:34 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered /home/naps62/projects/PlayAuth/app/views/devise/shared/_links.slim (1.8ms)
+  Rendered /home/naps62/projects/PlayAuth/app/views/devise/sessions/new.html.slim within layouts/application (5.3ms)
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/shared/_nav.html.slim (1.3ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 17:19:34 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:34 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:34 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:34 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/auth/google" for 127.0.0.1 at 2012-10-31 17:19:36 +0000
+
+
+Started GET "/users/auth/google/callback?_method=post&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&openid.mode=id_res&openid.op_endpoint=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fud&openid.response_nonce=2012-10-31T17%3A19%3A38ZH_9hm36Aol0ovQ&openid.return_to=http%3A%2F%2Flocalhost%3A3000%2Fusers%2Fauth%2Fgoogle%2Fcallback%3F_method%3Dpost&openid.assoc_handle=AMlYA9XdrG5UdVHYwM3WdhotHbebljNpmPlRyyEC6_KTNSyELmFciopb&openid.signed=op_endpoint%2Cclaimed_id%2Cidentity%2Creturn_to%2Cresponse_nonce%2Cassoc_handle%2Cns.ext1%2Cext1.mode%2Cext1.type.ext2%2Cext1.value.ext2%2Cext1.type.ext0%2Cext1.value.ext0%2Cext1.type.ext3%2Cext1.value.ext3&openid.sig=WrkMVdKLZNsImR2YHn%2F0Qn5%2Bd%2Fs%3D&openid.identity=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmee_JcogyH9M-tR2t2sXihnL2bx2_7lU&openid.claimed_id=https%3A%2F%2Fwww.google.com%2Faccounts%2Fo8%2Fid%3Fid%3DAItOawkmee_JcogyH9M-tR2t2sXihnL2bx2_7lU&openid.ns.ext1=http%3A%2F%2Fopenid.net%2Fsrv%2Fax%2F1.0&openid.ext1.mode=fetch_response&openid.ext1.type.ext2=http%3A%2F%2Faxschema.org%2FnamePerson%2Ffirst&openid.ext1.value.ext2=Miguel&openid.ext1.type.ext0=http%3A%2F%2Faxschema.org%2Fcontact%2Femail&openid.ext1.value.ext0=mpalhas%40gmail.com&openid.ext1.type.ext3=http%3A%2F%2Faxschema.org%2FnamePerson%2Flast&openid.ext1.value.ext3=Palhas" for 127.0.0.1 at 2012-10-31 17:19:37 +0000
+Processing by PlayAuth::Users::OmniauthCallbacksController#google as HTML
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPlayAuth::User Load (0.6ms)[0m  SELECT "play_auth_users".* FROM "play_auth_users" WHERE "play_auth_users"."email" = 'mpalhas@gmail.com' LIMIT 1
+  [1m[36mPlayAuth::Authorization Load (0.5ms)[0m  [1mSELECT "play_auth_authorizations".* FROM "play_auth_authorizations" WHERE "play_auth_authorizations"."user_id" = 1 AND "play_auth_authorizations"."provider" = 'Google' AND "play_auth_authorizations"."uid" = 'https://www.google.com/accounts/o8/id?id=AItOawkmee_JcogyH9M-tR2t2sXihnL2bx2_7lU' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "play_auth_authorizations" ("created_at", "email", "image_url", "link", "name", "provider", "secret", "token", "uid", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Wed, 31 Oct 2012 17:19:37 UTC +00:00], ["email", "mpalhas@gmail.com"], ["image_url", nil], ["link", nil], ["name", "Miguel Palhas"], ["provider", "Google"], ["secret", nil], ["token", nil], ["uid", "https://www.google.com/accounts/o8/id?id=AItOawkmee_JcogyH9M-tR2t2sXihnL2bx2_7lU"], ["updated_at", Wed, 31 Oct 2012 17:19:37 UTC +00:00], ["user_id", 1]]
+  [1m[35m (16.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 69ms (ActiveRecord: 50.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 17:19:37 +0000
+Processing by PlayAuth::UsersController#index as HTML
+  [1m[36mPlayAuth::User Load (0.2ms)[0m  [1mSELECT "play_auth_users".* FROM "play_auth_users" WHERE "play_auth_users"."id" = 1 LIMIT 1[0m
+  [1m[35mPlayAuth::Role Load (0.1ms)[0m  SELECT "play_auth_roles".* FROM "play_auth_roles" INNER JOIN "play_auth_role_users" ON "play_auth_roles"."id" = "play_auth_role_users"."role_id" WHERE "play_auth_role_users"."user_id" = 1
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/users/index.html.slim within layouts/application (0.0ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "play_auth_roles" INNER JOIN "play_auth_role_users" ON "play_auth_roles"."id" = "play_auth_role_users"."role_id" WHERE "play_auth_role_users"."user_id" = 1 AND "play_auth_roles"."name" = 'Admin'[0m
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/shared/_nav.html.slim (3.3ms)
+Completed 200 OK in 20ms (Views: 11.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 17:19:37 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:37 +0000
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:37 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:37 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/profile.1" for 127.0.0.1 at 2012-10-31 17:19:39 +0000
+Processing by PlayAuth::UsersController#profile as 
+  [1m[35mPlayAuth::User Load (0.2ms)[0m  SELECT "play_auth_users".* FROM "play_auth_users" WHERE "play_auth_users"."id" = 1 LIMIT 1
+  [1m[36mPlayAuth::Role Load (0.1ms)[0m  [1mSELECT "play_auth_roles".* FROM "play_auth_roles" INNER JOIN "play_auth_role_users" ON "play_auth_roles"."id" = "play_auth_role_users"."role_id" WHERE "play_auth_role_users"."user_id" = 1[0m
+  [1m[35mPlayAuth::Authorization Load (0.1ms)[0m  SELECT "play_auth_authorizations".* FROM "play_auth_authorizations" WHERE "play_auth_authorizations"."user_id" = 1
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/users/_user.html.slim (0.5ms)
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/users/show.html.slim within layouts/application (1.4ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "play_auth_roles" INNER JOIN "play_auth_role_users" ON "play_auth_roles"."id" = "play_auth_role_users"."role_id" WHERE "play_auth_role_users"."user_id" = 1 AND "play_auth_roles"."name" = 'Admin'[0m
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/shared/_nav.html.slim (3.4ms)
+Completed 200 OK in 25ms (Views: 15.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 17:19:39 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:39 +0000
+Served asset /jquery.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:39 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:39 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2012-10-31 17:19:47 +0000
+Processing by Devise::SessionsController#destroy as HTML
+WARNING: Can't verify CSRF token authenticity
+  [1m[35mPlayAuth::User Load (0.2ms)[0m  SELECT "play_auth_users".* FROM "play_auth_users" WHERE "play_auth_users"."id" = 1 LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 35.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-31 17:19:47 +0000
+Processing by PlayAuth::UsersController#index as HTML
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/users/index.html.slim within layouts/application (0.0ms)
+  Rendered /home/naps62/projects/PlayAuth/app/views/play_auth/shared/_nav.html.slim (1.2ms)
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-31 17:19:47 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:47 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:47 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-31 17:19:48 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
