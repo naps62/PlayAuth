@@ -9,6 +9,7 @@ require 'omniauth-facebook'
 require 'omniauth-openid'
 require 'uuidtools'
 require 'cancan'
+require 'slim'
 
 
 module PlayAuth
